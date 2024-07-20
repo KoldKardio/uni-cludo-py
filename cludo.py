@@ -47,12 +47,23 @@ x, y = 0, 0
 y_len = len(boardMap)-1
 x_len = len(boardMap[0])-1
 
-# functions: os-builtins
+# functions: os-builtins and extra
 def osClear():
     os.system('cls')
 def drawLn():
     print("xx--------------------------------xx")
-    
+def g_intro():
+    print("xx--------------------------------xx\n"+"---------     CLUD0.PY     ---------\n"+"xx--------------------------------xx ")
+    print(" - Player 1 is 'Red'.")    
+    print(" - Player 2 is 'Blue'.")    
+    print(" - Player 3 is 'Green'.")    
+    print(" - Player 4 is 'Yellow'.")    
+    drawLn()
+    print(">: 'Enter' to continue.")    
+    drawLn()
+    input("#: ")
+def demo():
+    pass
 # inGame functions
 def diceRoll():
     return random.randint(1, 6)
@@ -85,6 +96,7 @@ while gameRun:
         # user input: choices
         if choice == '1':
             osClear()
+            g_intro() # holds some info
             gameMenu = False
             play = True
         if choice == '2':
@@ -93,5 +105,16 @@ while gameRun:
         if choice == '3':
             quit()
         
-        
+    # playGame
+    while play:
+        # osClear()
+        print("This is in development!")
+    
+    
+    
+    
+    
+    
+    
+    
     pass

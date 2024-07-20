@@ -12,5 +12,6 @@ A simple game of lodu in cli... soon to be updated. Sorry for delay!
 :: 2. Rules
 :: 3. Quit
 > if 2 then goto rules: if 3 quit game:
-> if 1 then create player amount(1 play, 2 plays, ... so on!)
+> if 1 then player is greeted to:
 > Player 1 is red, P2 blue, P3 Green, P4 Yellow
+> Enter continues the game!
