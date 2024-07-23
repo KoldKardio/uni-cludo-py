@@ -15,3 +15,7 @@ A simple game of lodu in cli... soon to be updated. Sorry for delay!
 > if 1 then player is greeted to:
 > Player 1 is red, P2 blue, P3 Green, P4 Yellow
 > Enter continues the game!
+## Game Rule
+> p1,p2,p3 and p4 will roll the dice as their turn shows up.
+> Roll dice by input 1
+> move character based on diceRoll [1] to start run.

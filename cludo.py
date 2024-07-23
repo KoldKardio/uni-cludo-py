@@ -51,9 +51,9 @@ x_len = len(boardMap[0])-1
 def osClear():
     os.system('cls')
 def drawLn():
-    print("xx--------------------------------xx")
+    print("xx----------------------------------------xx")
 def g_intro():
-    print("xx--------------------------------xx\n"+"---------     CLUD0.PY     ---------\n"+"xx--------------------------------xx ")
+    print("xx----------------------------------------xx\n"+"-------------     CLUD0.PY     -------------\n"+"xx------------------------------------xx ")
     print(" - Player 1 is 'Red'.")    
     print(" - Player 2 is 'Blue'.")    
     print(" - Player 3 is 'Green'.")    
@@ -62,8 +62,14 @@ def g_intro():
     print(">: 'Enter' to continue.")    
     drawLn()
     input("#: ")
+# game rules
+def gameRules():
+    
+    pass
+
 def demo():
     pass
+
 # inGame functions
 def diceRoll():
     return random.randint(1, 6)
@@ -76,7 +82,7 @@ while gameRun:
     while gameMenu:
         # menu overlay
         osClear()
-        print("xx--------------------------------xx\n"+"---------     CLUD0.PY     ---------\n"+"xx--------------------------------xx ")
+        print("xx----------------------------------------xx\n"+"-------------     CLUD0.PY     -------------\n"+"xx----------------------------------------xx ")
         drawLn()
         print('1: NEW GAME')
         print('2: RULES')
@@ -107,8 +113,24 @@ while gameRun:
         
     # playGame
     while play:
-        # osClear()
-        print("This is in development!")
+        osClear()
+        # print("This is in development!")
+        # board draw
+        print("xx----------------------------------------xx\n"+"-------------     CLUD0.PY     -------------\n"+"xx----------------------------------------xx ")
+        # gapper
+        print("-- Play ludo with your friends and enjoy! --")
+        # print(" ")
+        
+        drawMap()
+        # check
+        drawLn()
+        dmchk = input("#: ")
+        if dmchk == "1":
+            osClear()
+            play = False
+            gameMenu = True
+
+        pass
     
     
     
