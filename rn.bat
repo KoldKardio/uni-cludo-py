@@ -1,2 +1,2 @@
 @echo off
-py cludo.py
+py glogic.py
