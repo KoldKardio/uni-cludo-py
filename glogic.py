@@ -62,7 +62,7 @@ moveTile = {
           'jmpDir': 'down',
      },
      '1': {
-          't': '3',
+          't': '1',
           'dir': 'left',
           'jump': True,
           'jmpDir': 'down',
