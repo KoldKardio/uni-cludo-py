@@ -19,3 +19,7 @@ A simple game of lodu in cli... soon to be updated. Sorry for delay!
 > p1,p2,p3 and p4 will roll the dice as their turn shows up.
 > Roll dice by input 1
 > move character based on diceRoll [1] to start run.
+
+## Game sequence and end modes to be re-structed[not uploaded in git.]
+## laneHopper method needs to be completed before.
+## Note: This game concept is going for a major re-design update and possible re-started over in g.engine or lib

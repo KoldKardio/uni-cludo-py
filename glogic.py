@@ -62,7 +62,7 @@ moveTile = {
           'jmpDir': 'down',
      },
      '1': {
-          't': '3',
+          't': '1',
           'dir': 'left',
           'jump': True,
           'jmpDir': 'down',
@@ -128,6 +128,9 @@ while True:
         else: print('Try again!')
 
         input("#: Enter to Continue!")
+<<<<<<< HEAD
         
     if choice == "2":
           quit()
+=======
+>>>>>>> d20f58fb05cece1482a90951fac6850885a4ede4
