@@ -102,6 +102,8 @@ def diceRoll():
     return random.randint(1, 6)
 # print(diceRoll())
 
+# to do
+# move a char from one loc to another: use 5x5 loop from js or try the lanehopper meth
 
 # gameLoop
 while True:
@@ -126,3 +128,6 @@ while True:
         else: print('Try again!')
 
         input("#: Enter to Continue!")
+        
+    if choice == "2":
+          quit()
