@@ -91,15 +91,15 @@ moveTile = {
 x, y= 0, 0
 y_len = len(demoMap)-1
 x_len = len(demoMap[0])-1
-currentLoc = demoMap[x][y]
+currentLoc = demoMap[y][x]
 
 tile_name = moveTile[currentLoc]['t']
 
-
+canMove = False
 
 # dice check
 def diceRoll():
-    return random.randint(1, 6)
+    return random.randint(1, 1)
 # print(diceRoll())
 
 # to do
@@ -111,8 +111,14 @@ while True:
     mapDraw()
     # check
     print(currentLoc)
-    # check
-    #  get input
+    
+    # direction check
+    if y > 0: print("1 - NORTH")
+    if x < x_len: print("2 - EAST")
+    if y < y_len: print("3 - SOUTH")
+    if x > 0: print("4 - WEST")
+    
+    # check get input
     print("Press 1 to roll dice")
     choice = input(">: ")
 
@@ -122,12 +128,45 @@ while True:
         print('--------------')
         print(valueHold)
         print('--------------')
+        currentLoc = demoMap[y][x]
 
-        if valueHold == 1:
+        if valueHold == 1 or valueHold == 2 or valueHold == 3 or canMove == True:
              print('Your player can move.')
-        else: print('Try again!')
+             canMove = True      
+          #    y = valueHold -1
+          #    currentLoc = demoMap[x][y]
+        else: 
+             print('Try again!')
+        
+        if canMove == True and valueHold != 0 and moveTile[currentLoc]['dir'] == 'right':
+             if moveTile[currentLoc]['jump'] == True:
+                  y += valueHold
+                  currentLoc = demoMap[y][x]
+                  canMove = False
+             else:
+                  x += valueHold
+                  currentLoc = demoMap[y][x]
+       
+        if canMove == True and valueHold != 0 and moveTile[currentLoc]['dir'] == 'left':
+             if moveTile[currentLoc]['jump'] == True:
+                  y += valueHold
+                  currentLoc = demoMap[y][x]
+                  canMove = False
+             else:
+                  x -= valueHold
+                  currentLoc = demoMap[y][x]
+        
+        if moveTile[currentLoc]['t'] == '#':
+             x, y= 0, 0
+             currentLoc = demoMap[x][y]
+
+                  
+          #    if valueHold == 0:
+          #         currentLoc = demoMap[x][y]
 
         input("#: Enter to Continue!")
+        print(x_len, y_len)
         
-    if choice == "2":
+        
+    if choice == "0":
           quit()
